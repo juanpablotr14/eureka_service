@@ -17,7 +17,7 @@ public class AlumnoServiceImpl implements AlumnoService{
     @Override
     @Transactional(readOnly = true)
     public Iterable<Alumno> findAll() {
-        return null;
+        return dao.findAll();
     }
 
     @Override
