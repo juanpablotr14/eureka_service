@@ -1,18 +1,20 @@
 package com.co.tascon.usuarios.MicroservicioUsuarios.service;
 
-import com.co.tascon.usuarios.MicroservicioUsuarios.entity.Alumno;
+
 import com.co.tascon.usuarios.MicroservicioUsuarios.repository.AlumnoRepository;
-import lombok.AllArgsConstructor;
+
+import co.com.tascon.common.usuario.models.entity.Alumno;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
 public class AlumnoServiceImpl implements AlumnoService{
 
-    private AlumnoRepository dao;
+	@Autowired
+    AlumnoRepository dao;
 
     @Override
     @Transactional(readOnly = true)

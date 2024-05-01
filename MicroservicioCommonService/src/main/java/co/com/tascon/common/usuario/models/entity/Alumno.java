@@ -1,27 +1,23 @@
-package com.co.tascon.usuarios.MicroservicioUsuarios.entity;
+package co.com.tascon.common.usuario.models.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Entity
 @Table
-@AllArgsConstructor
-@Data
-@NoArgsConstructor
 public class Alumno {
-    @Id
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
+    
     public Long getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getNombre() {
@@ -68,4 +64,20 @@ public class Alumno {
     private void prePersist(){
         this.createAt = new Date();
     }
+    
+    @Override
+	public boolean equals(Object obj) {
+		
+    	if ( this == obj ) {
+    		return true;
+    	}
+    	
+    	if(!(obj instanceof Alumno)) {
+    		return false;
+    	}
+    	
+		Alumno a = (Alumno) obj;
+		return this.id != null && this.id.equals(a.getId());
+	}
+    
 }
