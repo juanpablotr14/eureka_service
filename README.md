@@ -66,6 +66,7 @@ Las ventajas de utilizar componentes genéricos en Java son:
 
 ## Decoradores de la clase Alumno
 
+**@OneToMany(fetch = FetchType.LAZY)** Esto se refiere a una relación de uno a muchos en programación, donde un objeto está relacionado con varios objetos. fetch = FetchType.LAZY indica que los objetos relacionados no se cargarán automáticamente a menos que se acceda explícitamente a ellos, lo que puede mejorar el rendimiento al evitar cargar datos innecesarios de manera anticipada.
 **@Entity:** Un decorador utilizado en JPA (Java Persistence API) para marcar una clase como una entidad persistente, lo que significa que esta clase se mapea a una tabla en la base de datos.
 
 **@Table:** Un decorador de JPA que se utiliza para especificar el nombre de la tabla en la base de datos a la que está asociada una entidad. Puede incluir opciones adicionales como el esquema de la tabla.
@@ -97,8 +98,6 @@ Las ventajas de utilizar componentes genéricos en Java son:
 **@PathVariable:** Un decorador de Spring MVC que se utiliza para mapear variables de la URL a parámetros en métodos de controladores, permitiendo acceder a datos específicos de la URL en las operaciones del controlador.
 
 **Eureka:** El servidor Eureka es una herramienta de registro y descubrimiento de servicios dentro del ecosistema Spring Cloud. Permite que los microservicios se registren y se encuentren dinámicamente en un entorno distribuido, facilitando la comunicación entre ellos sin necesidad de configuraciones estáticas. Eureka ayuda a construir arquitecturas de microservicios escalables y resilientes al proporcionar un mecanismo centralizado para la administración y localización de servicios en la infraestructura de la aplicación.
-
-**@OneToMany(fetch = FetchType.LAZY)** Esto se refiere a una relación de uno a muchos en programación, donde un objeto está relacionado con varios objetos. fetch = FetchType.LAZY indica que los objetos relacionados no se cargarán automáticamente a menos que se acceda explícitamente a ellos, lo que puede mejorar el rendimiento al evitar cargar datos innecesarios de manera anticipada.
 
 ## Definición de propiedades
 
