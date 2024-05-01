@@ -98,6 +98,8 @@ Las ventajas de utilizar componentes genéricos en Java son:
 
 **Eureka:** El servidor Eureka es una herramienta de registro y descubrimiento de servicios dentro del ecosistema Spring Cloud. Permite que los microservicios se registren y se encuentren dinámicamente en un entorno distribuido, facilitando la comunicación entre ellos sin necesidad de configuraciones estáticas. Eureka ayuda a construir arquitecturas de microservicios escalables y resilientes al proporcionar un mecanismo centralizado para la administración y localización de servicios en la infraestructura de la aplicación.
 
+**@OneToMany(fetch = FetchType.LAZY)** Esto se refiere a una relación de uno a muchos en programación, donde un objeto está relacionado con varios objetos. fetch = FetchType.LAZY indica que los objetos relacionados no se cargarán automáticamente a menos que se acceda explícitamente a ellos, lo que puede mejorar el rendimiento al evitar cargar datos innecesarios de manera anticipada.
+
 ## Definición de propiedades
 
 **spring.application.name=MicroservicioSpringGateway**: Define el nombre de la aplicación Spring Boot, que en este caso es "MicroservicioSpringGateway". Este nombre se utiliza para identificar la aplicación dentro del ecosistema de Spring y puede ser utilizado por otros componentes de Spring Cloud, como Eureka, para registrar y descubrir servicios.
