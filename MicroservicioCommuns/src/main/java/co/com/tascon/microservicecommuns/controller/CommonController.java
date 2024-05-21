@@ -1,4 +1,4 @@
-package co.com.tascon.microservicecommuns.MicroservicioCommuns.controller;
+package co.com.tascon.microservicecommuns.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import co.com.tascon.microservicecommuns.MicroservicioCommuns.service.CommonService;
+import co.com.tascon.microservicecommuns.service.CommonService;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Value;

@@ -2,8 +2,9 @@ package com.co.tascon.usuarios.MicroservicioUsuarios.controller;
 
 
 import com.co.tascon.usuarios.MicroservicioUsuarios.service.AlumnoService;
+
 import co.com.tascon.common.usuario.models.entity.Alumno;
-import co.com.tascon.microservicecommuns.MicroservicioCommuns.controller.CommonController;
+import co.com.tascon.microservicecommuns.controller.CommonController;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+
 
 @RestController
 public class AlumnoController extends CommonController<Alumno, AlumnoService>{

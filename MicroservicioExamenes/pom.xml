@@ -8,17 +8,18 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>co.com.tascon.curso</groupId>
-	<artifactId>MicroservicioSpringCurso</artifactId>
+	<groupId>co.com.tascon.examenes</groupId>
+	<artifactId>MicroservicioExamenes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MicroservicioSpringCurso</name>
+	<name>MicroservicioExamenes</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.1</spring-cloud.version>
 	</properties>
+	
 	<dependencies>
-		
+	
 		<dependency>
 			<groupId>co.com.tascon.common.usuario</groupId>
 			<artifactId>MicroservicioCommonService</artifactId>
@@ -55,13 +56,18 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -79,6 +85,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

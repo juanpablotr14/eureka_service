@@ -1,4 +1,4 @@
-package co.com.tascon.MicroservicioSpringCurso.controller;
+package co.com.tascon.curso.MicroservicioSpringCurso.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import co.com.tascon.MicroservicioSpringCurso.services.CursoService;
 import co.com.tascon.common.usuario.models.entity.Alumno;
 import co.com.tascon.common.usuario.models.entity.Curso;
-import co.com.tascon.microservicecommuns.MicroservicioCommuns.controller.CommonController;
+import co.com.tascon.curso.MicroservicioSpringCurso.services.CursoService;
+import co.com.tascon.microservicecommuns.controller.CommonController;
 
 
 public class CursoController extends CommonController<Curso, CursoService>{

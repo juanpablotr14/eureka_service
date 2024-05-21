@@ -1,11 +1,10 @@
-package co.com.tascon.microservicecommuns.MicroservicioCommuns.service;
+package co.com.tascon.microservicecommuns.service.implementation;
 
-import co.com.tascon.microservicecommuns.MicroservicioCommuns.service.CommonService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import co.com.tascon.microservicecommuns.service.CommonService;
 
 import java.util.Optional;
 
