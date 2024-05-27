@@ -1,11 +1,13 @@
 package com.co.tascon.usuarios.MicroservicioUsuarios.controller;
 
 
+import com.co.tascon.usuarios.MicroservicioUsuarios.configurations.Configuration;
 import com.co.tascon.usuarios.MicroservicioUsuarios.service.AlumnoService;
 
 import co.com.tascon.common.usuario.models.entity.Alumno;
 import co.com.tascon.microservicecommuns.controller.CommonController;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +23,7 @@ public class AlumnoController extends CommonController<Alumno, AlumnoService>{
 
     @Value("${config.balanceador.test}")
     private String balanceadorTest;
+
 
     @GetMapping("/balanceador-test")
     public ResponseEntity<?> balanceadorTest(){
